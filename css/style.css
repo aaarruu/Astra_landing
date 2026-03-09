@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Cygre";
+    src:url(..assets/fonts/Cygre.ttf);
+}
+
+:root{
+    --sand: #FFEBDD;
+    --blue: #03345B;
+}
