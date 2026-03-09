@@ -6,6 +6,7 @@
 :root{
     --sand: #FFEBDD;
     --blue: #03345B;
+    --orange: #FF9062;
 }
 
 body{
@@ -15,7 +16,6 @@ body{
     #061623 38%,
     #000000 100%);
     font-family: "Cygre";
-    min-height: 2000px;
 }
 
 p {
@@ -123,6 +123,10 @@ header p{
         
     border-radius:24px;
     padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
         
     transition: all 0.4s ease;
 }
@@ -166,3 +170,236 @@ color: var(--blue);
 .text_cards p{
     color: var(--blue);
     }
+
+
+/*_______________________________________Игра__________________________________________________________*/
+
+.game{
+    color: var(--sand);
+    padding-top: 700px;
+}
+
+.stars{
+    margin-top: 67px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--sand);
+    gap: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.swan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lion{
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pegas{
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+}
+
+
+.place{
+    height:65px;
+    border:1px dashed rgba(255,255,255,.5);
+    border-radius:100px;
+    margin-top: 46px;
+    width: 100%;
+    }
+
+.answers{
+    margin: 0 auto;
+    width: 816px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
+}
+
+.answers button{
+
+    margin: 0 auto;
+    padding:14px 32px;
+    border-radius:50px;
+    border:none;
+    background:var(--sand);
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.answers button:hover{
+    opacity:.8;
+    background: var(--orange);
+    color: white;
+}
+
+.btop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    color: var(--sand);
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+.bbot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    color: var(--sand);
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+/*_______________________________________Скачать__________________________________________________________*/
+
+.content{
+    padding-top: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.mockup{
+    width: 90%;
+}
+
+.right_part{
+    margin: 0 auto;
+}
+
+.right_part h2{
+    font-size: 54px;
+    min-width: 700px;
+}
+
+.store{
+    padding-top: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 24px;
+}
+
+.store img{
+    mix-blend-mode: exclusion;
+}
+
+.store h3{
+    color: var(--blue);
+    padding-top: 22px;
+    
+}
+
+.apple{
+    padding: 14px, 21px;
+    background-color: var(--sand);
+    height: 80px;
+    width: 274px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+
+}
+
+.google{
+    padding: 14px, 21px;
+    background-color: var(--sand);
+    height: 80px;
+    width: 308px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/*_______________________________________Футер__________________________________________________________*/
+
+
+.contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    gap: 10px;
+}
+
+.contacts h3{
+    color: var(--blue);
+}
+
+footer{
+    padding-top: 96px;
+    background:#e4d3c4;
+    color:#13324d;
+}
+
+footer h2{
+    color: var(--blue);
+}
+
+footer ::placeholder{
+    font-size: 32px;
+}
+    
+.form{
+    max-width:666px;
+    display:flex;
+    flex-direction:column;
+    gap: 47px;
+}
+    
+.form input{
+    border:none;
+    border-bottom:2px solid var(--blue);
+    background: none;
+    height: 43px;
+    font-size:32px;
+    color: var(--blue);
+}
+    
+.form button{
+    margin-top: 71px;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    background:#0e2c47;
+    color: var(--sand);
+    cursor:pointer;
+    width: 302px;
+    height: auto;
+    font-size: 32px;
+}
+    
+.form button:hover{
+    opacity:.85;
+}
+
+.form input:focus{
+    outline:none;
+}
+
+.form button{
+
+    align-self: flex-end;
+}
