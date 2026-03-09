@@ -7,3 +7,162 @@
     --sand: #FFEBDD;
     --blue: #03345B;
 }
+
+body{
+    background:linear-gradient(180deg, 
+    #000000 0%, 
+    #092133 16%, 
+    #061623 38%,
+    #000000 100%);
+    font-family: "Cygre";
+    min-height: 2000px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 140%;
+
+}
+
+h1{
+    font-size: 128px;
+    color: var(--sand);
+}
+
+h2{
+    font-size: 64px;
+    color: var(--sand);
+}
+
+h3{
+    font-size: 32px;
+    color: var(--sand);
+    padding-bottom: 24px;
+}
+
+.container{
+    max-width: 1608px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/*_______________________________________Шапка__________________________________________________________*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    column-gap: 56px;
+
+    margin-top: 68px;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+}
+
+header p{
+    color: white;
+}
+
+.round_markets{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:var(--sand);
+}
+
+.round_markets img{
+    mix-blend-mode: difference;
+    padding-top: 3px;
+}
+
+
+/*_______________________________________Заставка__________________________________________________________*/
+
+.top{
+    padding-top: 426px;
+    padding-bottom: 426px;
+
+    background-image: url('../assets/images/stars_falling.png');
+    background-attachment: fixed;
+    height: 100px; 
+    width: 100%;
+    background-position: top;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    margin-top: -50px;
+}
+
+/*_______________________________________про нас__________________________________________________________*/
+
+
+.text_about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--sand);
+    gap: 20px;
+    padding-bottom: 120px;
+}
+
+.cards_block{
+    position:absolute;
+
+    width:790px;
+    height:430px;
+}
+    
+.card{
+    position:absolute;
+
+    width:790px;
+    height:430px;
+        
+    border-radius:24px;
+    padding: 32px;
+        
+    transition: all 0.4s ease;
+}
+
+.card1{
+    background:#e6d3c3;
+    z-index:3;
+    left:0;
+}
+
+.card2{
+    background:#64686D;
+    z-index:2;
+    left:395px;
+}
+
+.card3{
+    background:#23313D;
+    z-index:1;
+    left:790px;
+    color:white;
+}
+
+.card:hover{
+    z-index:10;
+    transform:translateY(-10px);
+    background: #e6d3c3;
+
+}
+
+.text_cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text_cards h2{
+color: var(--blue);
+}
+
+.text_cards p{
+    color: var(--blue);
+    }
