@@ -37,7 +37,6 @@ h2{
 h3{
     font-size: 32px;
     color: var(--sand);
-    padding-bottom: 24px;
 }
 
 .container{
@@ -234,6 +233,7 @@ color: var(--blue);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     color: var(--sand);
     gap: 20px;
     padding-bottom: 20px;
@@ -320,11 +320,12 @@ color: var(--blue);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .mockup{
-    width: 90%;
+    width: 50%;
 }
 
 .right_part{
@@ -342,6 +343,7 @@ color: var(--blue);
     flex-direction: row;
     justify-content: left;
     gap: 24px;
+    padding-bottom: 50px;
 }
 
 .store img{
@@ -429,7 +431,8 @@ color: var(--blue);
     flex-direction: row;
     justify-content: space-between;
     align-items: end;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
     padding-bottom: 80px;
 }
 
@@ -510,4 +513,14 @@ footer ::placeholder{
 
 .contacts a h3:active{
     color: chocolate;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: end;
+    align-items: end;
+    gap: 20px;
+    padding-bottom: 0px;
 }
