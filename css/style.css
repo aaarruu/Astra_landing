@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Cygre";
-    src:url(..assets/fonts/Cygre.ttf);
+    src:url(..\assets\fonts\Cygre-Regular.ttf);
 }
 
 :root{
@@ -72,11 +72,25 @@ header p{
     height:44px;
     border-radius:50%;
     background:var(--sand);
+    transition: 0.2s;
 }
 
 .round_markets img{
-    mix-blend-mode: difference;
-    padding-top: 3px;
+    mix-blend-mode: exclusion;
+    padding-top: 8px;
+    padding-left: 8px;
+}
+
+.round_markets:hover{
+    background: var(--orange);
+
+    img{
+        mix-blend-mode: normal;
+    } 
+}
+
+.round_markets:active{
+    background: chocolate;
 }
 
 
@@ -110,16 +124,13 @@ header p{
 
 .cards_block{
     position:absolute;
-
-    width:790px;
-    height:430px;
 }
     
 .card{
     position:absolute;
 
-    width:790px;
-    height:430px;
+    width:680px;
+    height:400px;
         
     border-radius:24px;
     padding: 32px;
@@ -129,6 +140,20 @@ header p{
     justify-content: space-between;
         
     transition: all 0.4s ease;
+    color: var(--blue);
+}
+
+.card p{
+    max-width: 525px;
+    color: var(--blue);
+}
+
+.card h2{
+    color: var(--blue);
+}
+
+.card h1{
+    color: var(--blue);
 }
 
 .card1{
@@ -140,13 +165,13 @@ header p{
 .card2{
     background:#64686D;
     z-index:2;
-    left:395px;
+    left:450px;
 }
 
 .card3{
     background:#23313D;
     z-index:1;
-    left:790px;
+    left:870px;
     color:white;
 }
 
@@ -154,7 +179,32 @@ header p{
     z-index:10;
     transform:translateY(-10px);
     background: #e6d3c3;
+}
 
+.card:hover p{
+    color: var(--blue);
+}
+
+.card:hover h2{
+    color: var(--blue);
+}
+
+.card2:hover{
+    z-index:10;
+}
+
+.cards_block:has(.card2:hover) .card1,
+.cards_block:has(.card2:hover) .card3{
+    background:#64686D;
+}
+
+.cards_block:has(.card3:hover) .card2{
+    background:#64686D;
+}
+
+.cards_block:has(.card3:hover) .card1{
+    background:#23313D;
+    z-index: 1;
 }
 
 .text_cards{
@@ -216,54 +266,51 @@ color: var(--blue);
     height:65px;
     border:1px dashed rgba(255,255,255,.5);
     border-radius:100px;
-    margin-top: 46px;
-    width: 100%;
-    }
+    margin-top:46px;
+    width:378px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.place button{
+    width:100%;
+    height:100%;
+    font-size:32px;
+    border-radius:100px;
+    background-color: var(--sand);
+}
 
 .answers{
-    margin: 0 auto;
-    width: 816px;
+    margin:0 auto;
+    padding-top: 45px;
+    max-width: 800px;
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
-    margin-top:20px;
+    gap:16px;
+    justify-content:center;
 }
 
 .answers button{
-
+    background:var(--sand);
     margin: 0 auto;
     padding:14px 32px;
     border-radius:50px;
     border:none;
-    background:var(--sand);
     cursor: pointer;
     font-size: 32px;
+    margin: 0;
 }
 
 .answers button:hover{
-    opacity:.8;
     background: var(--orange);
     color: white;
 }
 
-.btop{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    color: var(--sand);
-    gap: 16px;
-    padding-bottom: 16px;
-}
-
-.bbot{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    color: var(--sand);
-    gap: 16px;
-    padding-bottom: 16px;
+.answers button:active{
+    background: chocolate;
+    color: white;
 }
 
 /*_______________________________________Скачать__________________________________________________________*/
@@ -299,6 +346,7 @@ color: var(--blue);
 
 .store img{
     mix-blend-mode: exclusion;
+    transition: 0.3s;
 }
 
 .store h3{
@@ -316,7 +364,8 @@ color: var(--blue);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; 
+    gap: 10px;
+    transition: 0.3s;
 
 }
 
@@ -330,9 +379,48 @@ color: var(--blue);
     align-items: center;
     justify-content: center;
     gap: 10px;
+    transition: 0.3s;
+}
+
+.store a{
+    text-decoration: none;
+    color: inherit; 
 }
 
 
+.apple:hover{
+    background: var(--orange);
+
+    img{
+        mix-blend-mode: normal;
+    }
+
+    h3{
+        color: white;
+    }
+
+}
+
+.apple:active{
+    background: chocolate;
+}
+
+.google:hover{
+    background: var(--orange);
+    color: white;
+
+    img{
+        mix-blend-mode: normal;
+    } 
+    h3{
+        color: white;
+    }
+
+}
+
+.google:active{
+    background: chocolate;
+}
 /*_______________________________________Футер__________________________________________________________*/
 
 
@@ -342,10 +430,12 @@ color: var(--blue);
     justify-content: space-between;
     align-items: end;
     gap: 10px;
+    padding-bottom: 80px;
 }
 
 .contacts h3{
     color: var(--blue);
+    transition: 0.3s;
 }
 
 footer{
@@ -389,10 +479,16 @@ footer ::placeholder{
     width: 302px;
     height: auto;
     font-size: 32px;
+    transition: 0.3s;
 }
     
 .form button:hover{
-    opacity:.85;
+    background: var(--orange);
+    color: white;
+}
+
+.form button:active{
+    background: chocolate;
 }
 
 .form input:focus{
@@ -400,6 +496,18 @@ footer ::placeholder{
 }
 
 .form button{
-
     align-self: flex-end;
+}
+
+.contacts a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.contacts a h3:hover{
+    color: var(--orange);
+}
+
+.contacts a h3:active{
+    color: chocolate;
 }

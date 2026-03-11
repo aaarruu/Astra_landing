@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astra</title>
 </head>
@@ -12,15 +13,18 @@
     <div class="container">
 
         <header>
-            <img src="assets/images/logo.svg" alt="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.svg" alt="logo">
+            </a>
             <p>info@astra</p>
             <div class="icons">
-                <button class="round_markets">
+                <a href="https://play.google.com/store/apps/details?id=com.vitotechnology.sky.tonight.map.star.walk&hl=ru" class="round_markets">
                     <img src="assets/icons/gplay.png" alt="">
-                </button>
-                <button class="round_markets">
-                    <img src="assets/icons/apple.png" alt="">
-                </button>
+                </a>
+
+                <a href="https://apps.apple.com/us/app/sky-tonight-stargazing-guide/id1570594940" class="round_markets">
+                        <img src="assets/icons/apple.png" alt="">
+                </a>
             </div>
                 
         </header>
@@ -48,16 +52,16 @@
             <div class="cards_block">
                 <div class="card card1">
                         <h2>Отправляйте послания</h2>
-                        <p>Вы получите подробное описание вашей личности и сможете лучше понять себя.</p>
+                        <p>Вы получите подробное описание вашей личности и&nbsp;сможете лучше понять себя.</p>
                 </div>
 
                 <div class="card card2">
-                        <h2>Отправляйте послания</h2>
-                        <p>Вы получите подробное описание вашей личности и сможете лучше понять себя.</p>
+                        <h2>Читайте ленту<br>и заводите друзей</h2>
+                        <p>Вы получите подробное описание вашей личности и&nbsp;сможете лучше понять себя.</p>
                 </div>
                 <div class="card card3">
-                        <h2>Отправляйте послания</h2>
-                        <p>Вы получите подробное описание вашей личности и сможете лучше понять себя.</p>
+                        <h1>67</h1>
+                        <p>Cтолько посланий оставили пользователи сегодня.</p>
                 </div>
             </div>
         </section>
@@ -68,7 +72,7 @@
                 к картинке и угадывай их названия</p>
             <div class="stars">
                 <div class="swan">
-                    <img src="assets/images/swon.png" alt="">
+                    <img src="assets/images/swan.png" alt="">
                     <div class="place"></div>
                 </div>
                 <div class="lion">
@@ -83,17 +87,13 @@
             </div>
 
             <div class="answers">
-                <div class="btop">
                     <button>лебедь</button>
                     <button>большая медведица</button>
                     <button>стрелец</button>
-                </div>
-                <div class="bbot">
                     <button>рыбы</button>
                     <button>лев</button>
                     <button>орион</button>
                     <button>пегас</button>
-                </div>
                 </div>
         </section>
 
@@ -108,14 +108,18 @@
                     <h2>Устанавливай приложение<br> и общайся в космосе!</h2>
 
                     <div class="store">
-                        <div class="apple">
-                            <img src="assets/icons/big_apple.png" alt="">
-                            <h3>App Store</h3>
-                        </div>
-                        <div class="google">
-                            <img src="assets/icons/big_google.png" alt="">
-                            <h3>Google Play</h3>
-                        </div>
+                        <a href="https://apps.apple.com/us/app/sky-tonight-stargazing-guide/id1570594940">
+                            <div class="apple">
+                                <img src="assets/icons/big_apple.png" alt="">
+                                <h3>App Store</h3>
+                            </div>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.vitotechnology.sky.tonight.map.star.walk&hl=ru">
+                            <div class="google">
+                                <img src="assets/icons/big_google.png" alt="">
+                                <h3>Google Play</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -137,12 +141,15 @@
                         <button type="submit">отправить</button>
 
                     </form>
-
-                        <div>
-                            <h3>Политика конфиденциальности</h3>
-                        </div>
-                        <div>
-                            <h3>2026</h3>
+                        <div class="bottom">
+                            <a href="https://romano-landing-nextjs.vercel.app/files/privacy_policy.pdf">
+                                <div>
+                                    <h3>Политика конфиденциальности</h3>
+                                </div>
+                            </a>
+                            <div class="year">
+                                <h3>2026</h3>
+                            </div>
                         </div>
 
                 </div>
@@ -154,4 +161,5 @@
     </div>
     
 </body>
+<script src="script/minigame.js"></script>
 </html>
