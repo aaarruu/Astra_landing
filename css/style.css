@@ -128,7 +128,7 @@ header p{
 .card{
     position:absolute;
 
-    width:680px;
+    width:35vw;
     height:400px;
         
     border-radius:24px;
@@ -140,6 +140,7 @@ header p{
         
     transition: all 0.4s ease;
     color: var(--blue);
+    
 }
 
 .card p{
@@ -148,10 +149,12 @@ header p{
 }
 
 .card h2{
+    max-width: 525px;
     color: var(--blue);
 }
 
 .card h1{
+    max-width: 525px;
     color: var(--blue);
 }
 
@@ -164,13 +167,13 @@ header p{
 .card2{
     background:#64686D;
     z-index:2;
-    left:450px;
+    left: 25vw;
 }
 
 .card3{
     background:#23313D;
     z-index:1;
-    left:870px;
+    left:50vw;
     color:white;
 }
 
@@ -323,9 +326,13 @@ color: var(--blue);
     flex-wrap: wrap;
     gap: 10px;
 }
+.mockup {
+    width: auto;
+}
 
-.mockup{
-    width: 50%;
+.mockup img{
+    min-width: 600px;
+    width: 45vw;
 }
 
 .right_part{
@@ -334,7 +341,7 @@ color: var(--blue);
 
 .right_part h2{
     font-size: 54px;
-    min-width: 700px;
+    max-width: 700px;
 }
 
 .store{
@@ -353,7 +360,6 @@ color: var(--blue);
 
 .store h3{
     color: var(--blue);
-    padding-top: 22px;
     
 }
 

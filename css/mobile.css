@@ -83,9 +83,11 @@
     
     .card{
         position:static;
-        width:100%;
+        width:auto;
+        min-width: 100%-40px;
         height:215px;
         padding:20px;
+        margin: 0% auto;
     }
     
     .card1,
@@ -111,6 +113,7 @@
         overflow-x:auto;
         scroll-snap-type:x mandatory;
         gap:20px;
+        flex-wrap: nowrap;
     }
     
     .stars > div{
@@ -131,7 +134,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left: 30px;
     }
     
     .stars img{
