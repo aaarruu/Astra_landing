@@ -16,6 +16,7 @@ body{
     #061623 38%,
     #000000 100%);
     font-family: "Cygre";
+    overflow-x: hidden;
 }
 
 p {
