@@ -183,7 +183,7 @@
         width:250%;
         margin-left: -70%;
         padding-bottom: 60px;
-        object-fit: cover;
+        overflow: hidden;
     }
     
     .right_part h2{
