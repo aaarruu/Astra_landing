@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Cygre";
-    src:url(..\assets\fonts\Cygre-Regular.ttf);
+    src:url('../assets/fonts/Cygre-Regular.ttf');
 }
 
 :root{
