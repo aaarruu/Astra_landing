@@ -392,6 +392,11 @@ color: var(--blue);
     transition: 0.3s;
 }
 
+.apple h3,
+.google h3{
+    padding-bottom: 0px;
+}
+
 .store a{
     text-decoration: none;
     color: inherit; 
