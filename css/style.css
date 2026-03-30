@@ -38,6 +38,7 @@ h2{
 h3{
     font-size: 32px;
     color: var(--sand);
+    padding-bottom:16px;
 }
 
 .container{
