@@ -3,6 +3,8 @@ const places = document.querySelectorAll(".place");
 const answers = document.querySelector(".answers");
 
 let dragged = null;
+let draggedClone = null;
+let startX = 0, startY = 0;
 
 const correct = {
     swan: "лебедь",
@@ -17,6 +19,8 @@ buttons.forEach(button => {
 
     button.addEventListener("dragstart", () => {
         dragged = button;
+        e.dataTransfer.setData("text/plain", button.textContent); 
+        e.dataTransfer.effectAllowed = "move";                    
         setTimeout(() => button.style.opacity = "0.5", 0);
     });
 
@@ -45,6 +49,7 @@ places.forEach(place => {
         }
 
         place.appendChild(dragged);
+        dragged = null;                 
 
         checkAnswer(place);
     });
@@ -64,6 +69,71 @@ answers.addEventListener("drop", e => {
     answers.appendChild(dragged);
 
     resetBorders();
+    dragged = null;  
+});
+
+
+// Мобилка
+
+buttons.forEach(button => {
+
+    button.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        dragged = button;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        
+      
+        draggedClone = button.cloneNode(true);
+        draggedClone.style.position = "fixed";
+        draggedClone.style.left = `${startX - 30}px`;
+        draggedClone.style.top = `${startY - 30}px`;
+        draggedClone.style.width = `${button.offsetWidth}px`;
+        draggedClone.style.opacity = "0.6";
+        draggedClone.style.pointerEvents = "none";
+        draggedClone.style.zIndex = "9999";
+        document.body.appendChild(draggedClone);
+        
+        button.style.opacity = "0.3";
+    });
+
+    button.addEventListener("touchmove", (e) => {
+        e.preventDefault();
+        if (!draggedClone) return;
+        
+        const touch = e.touches[0];
+        draggedClone.style.left = `${touch.clientX - 30}px`;
+        draggedClone.style.top = `${touch.clientY - 30}px`;
+    });
+
+    button.addEventListener("touchend", (e) => {
+        e.preventDefault();
+        if (!dragged) return;
+        
+        if (draggedClone) {
+            draggedClone.remove();
+            draggedClone = null;
+        }
+        
+        const touch = e.changedTouches[0];
+        const elemUnderTouch = document.elementFromPoint(touch.clientX, touch.clientY);
+        const targetPlace = elemUnderTouch.closest(".place");
+        
+        if (targetPlace) {
+            const existing = targetPlace.querySelector("button");
+            if (existing && existing !== dragged) {
+                answers.appendChild(existing);
+            }
+            targetPlace.appendChild(dragged);
+            checkAnswer(targetPlace);
+        } else {
+            answers.appendChild(dragged);
+            resetBorders();
+        }
+        
+        dragged.style.opacity = "1";
+        dragged = null;
+    });
 });
 
 
